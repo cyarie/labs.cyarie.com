@@ -1,0 +1,68 @@
+body {
+    display: block;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+}
+
+h3 {
+    display: block;
+    text-align: center;
+}
+
+.lab {
+    display: block;
+    width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.lab img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-top: 5%;
+    max-width: 80%;
+    border: 2px solid white;
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    .lab {
+        width: 670px;
+    }
+    .lab img {
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+    .lab {
+        width: 570px;
+    }
+    .lab img {
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .lab img {
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="cyarie labs, web scale technology and labs at their finest">
+    <meta name="twitter:card" content="WEB SCALE LABS" />
+    <meta name="twitter:site" content="http://labs.cyarie.com" />
+    <meta name="twitter:title" content="cyarie labs" />
+    <meta name="twitter:description" content="Only the most scalable of labs" />
+    <meta name="twitter:image" content="https://s3.amazonaws.com/suchgop/static/images/doge-600.png" />
+    <meta property="og:title" content="cyarie labs" />
+    <meta property="og:image" content="https://s3.amazonaws.com/suchgop/static/images/doge-600.png" />
+    <meta property="og:site_name" content="cyarie labs" />
+    <meta property="og:description" content="Only the most scalable of labs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://labs.cyarie.com" />
+    <title>cyarie labs</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="lab">
+    <h1>CHRIS YARIE LABS</h1>
+    <h3>"OUR LABS ARE WEBSCALE"</h3>
+</div>
+<script type="text/javascript">
+    (function(){
+        var window = this;
+        var clientId = "6744a2023444038";
+        var http = new XMLHttpRequest();
+        var url = "https://api.imgur.com/3/gallery/r/labrador";
+        http.open("GET", url, true);
+
+        http.setRequestHeader("Authorization", "Client-ID " + clientId);
+
+        http.onreadystatechange = function() {
+            if(http.readyState == 4 && http.status >= 200 && http.status < 400) {
+                var dorgs = JSON.parse(http.responseText);
+                var randomDorg = dorgs.data[Math.floor(Math.random() * dorgs.data.length)];
+                var lab = document.getElementsByClassName("lab")[0];
+                var randomLab = document.createElement("img");
+                randomLab.setAttribute("src", randomDorg.link);
+                randomLab.setAttribute("id", "randomLab");
+                lab.appendChild(randomLab);
+            }
+        };
+        http.send();
+    })();
+</script>
+</body>
+</html>
